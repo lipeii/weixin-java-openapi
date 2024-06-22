@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: weixin-java-openapi
+
+server:
+  port: 8001
+
+wechat:
+  cp:
+    app-configs:
+      - corp-id: 123
