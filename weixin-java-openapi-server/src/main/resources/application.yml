@@ -5,7 +5,9 @@ spring:
 server:
   port: 8001
 
-wechat:
-  cp:
-    app-configs:
-      - corp-id: 123
+weixin:
+  openapi:
+    endpoint: http://localhost:8001
+    cp:
+      app-configs:
+        - corp-id: 123

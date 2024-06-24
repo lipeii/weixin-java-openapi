@@ -4,6 +4,7 @@ package com.weixin.openapi.result;
 import com.alibaba.fastjson2.JSONObject;
 import com.weixin.openapi.enums.StatusCodeEnum;
 import com.weixin.openapi.exception.BusinessException;
+import com.weixin.openapi.utils.$;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 
@@ -115,6 +116,10 @@ public class BaseResponse<T> {
 
     public static <T> BaseResponse<T> success(T data) {
         return restResult(data,StatusCodeEnum.SUCCESS.getCode(), null,null,null,true);
+    }
+
+    public static <T> BaseResponse<T> success(Object o,Class<T> clazz) {
+        return restResult($.copy(o,clazz),StatusCodeEnum.SUCCESS.getCode(),null,null,null,true);
     }
 
     public static <T> BaseResponse<T> success(String msg) {

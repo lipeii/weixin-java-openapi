@@ -1,7 +1,7 @@
-package com.weixin.openapi.config;
+package com.weixin.openapi.cp.config;
 
 import com.google.common.collect.Maps;
-import com.weixin.openapi.config.properties.WxCpProperties;
+import com.weixin.openapi.cp.config.properties.WxCpProperties;
 import com.weixin.openapi.exception.BusinessException;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.Resource;

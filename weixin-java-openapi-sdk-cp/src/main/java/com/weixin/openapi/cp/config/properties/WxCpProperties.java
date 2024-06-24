@@ -1,4 +1,4 @@
-package com.weixin.openapi.config.properties;
+package com.weixin.openapi.cp.config.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import java.util.List;
 
 @Data
-@ConfigurationProperties(prefix = "wechat.cp")
+@ConfigurationProperties(prefix = "weixin.openapi.cp")
 public class WxCpProperties {
 
     private List<AppConfig> appConfigs;
