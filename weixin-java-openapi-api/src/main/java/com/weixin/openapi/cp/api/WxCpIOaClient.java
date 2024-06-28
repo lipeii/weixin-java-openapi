@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 /**
  * 企业微信oa 接口
  */
-@FeignClient(value = "weixin-java-openapi",contextId = "wx-cp", url = "${weixin.openapi.endpoint}")
+@FeignClient(value = "weixin-java-openapi",contextId = "wx-cp-oa", url = "${weixin.openapi.endpoint}",path = "/wx-cp-oa")
 public interface WxCpIOaClient {
 
     /**

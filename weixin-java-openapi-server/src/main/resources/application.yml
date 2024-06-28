@@ -11,3 +11,23 @@ weixin:
     cp:
       app-configs:
         - corp-id: 123
+
+# 日志配置
+logging:
+  level:
+    root: info
+    org.springframework.web: debug
+    com.weixin.openapi: debug
+  file:
+    name: ${logging.file.path}.log
+    path: logs/weixin-java-openapi
+  pattern:
+    console: '%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint} [traceId:%X{traceId}] %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}'
+  logback:
+    rollingpolicy:
+      # 设置日志滚动天数
+      max-history: 30
+      # 设置日志名称
+      file-name-pattern: ${logging.file.path}-%d{yyyy-MM-dd}.%i.log
+      # 设置每个文件最大值
+      max-file-size: 100MB
